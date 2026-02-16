@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Android build artifacts
+android/build/
+*/android/build/
+*.keystore
+!debug.keystore
+
+# iOS build artifacts
+ios/build/
+*/ios/build/
+*.ipa
+*.app
+*.der
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Debug and local config
+.env*
+.DS_Store
+.idea/
+.vscode/
+.yarn/
+!.yarn/releases/
+!.yarn/plugins/
+yarn-error.log
+
+# System files
+Thumbs.db
+Desktop.ini
+
+# Build output
+build/
+bin/
+obj/
+out/
+
+# Gemini (Local)
+.gemini/
