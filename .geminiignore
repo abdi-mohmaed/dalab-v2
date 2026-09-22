@@ -1,0 +1,16 @@
+# Gemini Ignore - Prevent accidental edits to critical system or web-only files
+node_modules/
+.next/
+dist/
+build/
+.git/
+*.log
+.env*
+dalab_web/
+!dalab_web/src/app/
+!dalab_web/src/components/
+!dalab_web/src/hooks/
+!dalab_web/src/context/
+!dalab_web/src/layouts/
+!dalab_web/src/theme/
+!dalab_web/src/types/

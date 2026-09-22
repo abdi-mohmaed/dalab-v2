@@ -1,0 +1,21 @@
+import React, { useEffect } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { RootNavigator } from './src/navigation/RootNavigator';
+import { useAuth } from '@dalab/shared';
+
+function App(): React.JSX.Element {
+    const { initialize } = useAuth();
+
+    useEffect(() => {
+        // Initializing auth for mobile
+        initialize();
+    }, [initialize]);
+
+    return (
+        <NavigationContainer>
+            <RootNavigator />
+        </NavigationContainer>
+    );
+}
+
+export default App;

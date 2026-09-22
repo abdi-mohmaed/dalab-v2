@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --dalab-yellow: #FFC644;
+  --dalab-blue: #233886;
+  --dalab-green: #38AE04;
+  --dalab-red: #FD3C3C;
+}
+
+@theme {
+  --color-primary: var(--dalab-yellow);
+  --color-secondary: var(--dalab-green);
+  --color-accent: var(--dalab-red);
+  --color-brand-blue: var(--dalab-blue);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F3F4F6;
+  font-family: 'Inter', system-ui, sans-serif;
+
+  /* PWA/Native Feel */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  overscroll-behavior-y: none;
+  /* Prevents pull-to-refresh pull-away */
+  touch-action: manipulation;
+
+  /* Notch/Safe Area Handling */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+/* Fix for 100vh on mobile browsers */
+html {
+  height: -webkit-fill-available;
+}
+
+/* Prevent text selection on primarily interactive elements */
+button,
+a,
+.interactive {
+  user-select: none;
+}

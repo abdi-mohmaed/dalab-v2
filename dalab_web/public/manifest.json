@@ -1,0 +1,22 @@
+{
+    "name": "Dalab",
+    "short_name": "Dalab",
+    "description": "Professional Mobile Marketplace",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#FFC644",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/dalab-logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/dalab-logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

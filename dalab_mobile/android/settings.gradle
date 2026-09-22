@@ -1,0 +1,27 @@
+pluginManagement {
+    includeBuild('../../node_modules/@react-native/gradle-plugin')
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+    resolutionStrategy {
+        eachPlugin { details ->
+            if (details.requested.id.id.startsWith("org.jetbrains.kotlin")) {
+                details.useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24")
+            }
+        }
+    }
+}
+
+plugins { id("com.facebook.react.settings") }
+
+extensions.configure(com.facebook.react.ReactSettingsExtension) { ex -> 
+    ex.autolinkLibrariesFromCommand() 
+}
+
+rootProject.name = 'DalabMobile'
+include ':app'
+
+// Include the plugin as a build to allow classpath substitution in build.gradle
+includeBuild('../../node_modules/@react-native/gradle-plugin')

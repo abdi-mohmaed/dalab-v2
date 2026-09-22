@@ -1,0 +1,73 @@
+{
+    "pages": [
+        {
+            "pageName": "Home",
+            "path": "dalab_web/src/app/page.tsx",
+            "components": [
+                "MarketplaceTabs",
+                "BigBanner",
+                "MiddleBanner",
+                "SmallBanner",
+                "CategoryGrid",
+                "ProductCard",
+                "SearchBar",
+                "HomeSkeleton"
+            ],
+            "hooks": [
+                "useProducts",
+                "useDashboard",
+                "useStore"
+            ],
+            "complexity": "core"
+        },
+        {
+            "pageName": "ProductDetail",
+            "path": "dalab_web/src/app/product/[id]/page.tsx",
+            "components": [
+                "ProductHeader",
+                "VariantSelector",
+                "ReviewForm",
+                "ReviewList",
+                "TrustBadges"
+            ],
+            "hooks": [
+                "useCart",
+                "useAuth"
+            ],
+            "complexity": "core"
+        },
+        {
+            "pageName": "Cart",
+            "path": "dalab_web/src/app/cart/page.tsx",
+            "components": [
+                "EmptyState"
+            ],
+            "hooks": [
+                "useCart"
+            ],
+            "complexity": "core"
+        },
+        {
+            "pageName": "Login",
+            "path": "dalab_web/src/app/login/page.tsx",
+            "components": [
+                "CurvedAuthLayout"
+            ],
+            "hooks": [
+                "useAuth"
+            ],
+            "complexity": "core"
+        }
+    ],
+    "dependencies": [
+        "react-native-url-polyfill",
+        "react-native-get-random-values",
+        "@react-native-async-storage/async-storage",
+        "react-native-fast-image",
+        "react-native-safe-area-context",
+        "@react-navigation/native",
+        "@react-navigation/stack",
+        "@supabase/supabase-js",
+        "zustand"
+    ]
+}
